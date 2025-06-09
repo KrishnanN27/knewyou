@@ -20,7 +20,7 @@ export default function About() {
         <div class="container">
                 <div className="title_headling">
                         <h3>We Provides Shortage Remarkable Ideas!</h3>
-                        <p>Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                        <p>We craft innovative strategies to overcome shortages and drive success. Whether you're looking for fresh ideas or expert guidance, we've got you covered—because your business deserves the best!</p>
                 </div>
                 <div className="about_box_wrapper">
                         <div className="about_box">
@@ -29,7 +29,7 @@ export default function About() {
                                 </div>
                                 <div className="about_content">
                                         <h5>Development</h5>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit accusa ntium dolor emque laudan sit accusa.</p>
+                                        <p>We create innovative and scalable solutions tailored to your business needs,ensuring seamless functionality and efficiency.</p>
                                 </div>
                         </div>
                         <div className="about_box">
@@ -38,7 +38,7 @@ export default function About() {
                                 </div>
                                 <div className="about_content">
                                         <h5>Integration</h5>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit accusa ntium dolor emque laudan sit accusa.</p>
+                                        <p>Effortlessly connect systems, tools, and technologies to streamline operations, enhance productivity, and drive growth.</p>
                                 </div>
                         </div>
                         <div className="about_box">
@@ -47,7 +47,7 @@ export default function About() {
                                 </div>
                                 <div className="about_content">
                                         <h5>Branding</h5>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit accusa ntium dolor emque laudan sit accusa.</p>
+                                        <p>Build a powerful brand identity with strategic positioning, compelling visuals, and impactful messaging that leaves a lasting impression</p>
                                 </div>
                         </div>
                 </div>
@@ -59,21 +59,21 @@ export default function About() {
                                 </div>
                                 <div className="img_info_box">
                                         <h6 className="img_info_title">GET A PRICE QUOTE TODAY!</h6>
-                                        <p>Nemo enim ipsam oluptatem quia oluptas <br/>sit aspernatur aut odit aut fugit.</p>
+                                        <p>Receive a transparent and tailored pricing estimate that fits your needs. No delays, no hidden fees—just a straightforward quote to help you make informed decisions.</p>
                                         <a href="/">{faPhoneIcon}<span>
-                                                1-800-654-3210</span></a>
+                                                +91-6206710113</span></a>
                                 </div>
                         </div>
 
                         <div className="about_col more_space">
                                 <h3>We have business skills that will icrease your earnings</h3>
-                                <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p>We provide strategic insights and innovative solutions to help you scale your business, optimize operations, and boost profitability. With the right skills and smart execution, financial growth is within your reach!</p>
 
                                 <div className="grid_info">
                                         <div className="icon">{faUserClockIcon}</div>
                                         <div className="detail">
                                                 <h4>Start Your own business in minutes</h4>
-                                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                                                <p>Starting your own business has never been easier! With expert guidance, strategic planning, and innovative solutions, you can set up, scale, and grow your venture effortlessly. Your success starts today</p>
                                         </div>
                                 </div>
 
@@ -82,7 +82,7 @@ export default function About() {
                                         <div className="icon green_icon">{faHouseLaptopcon}</div>
                                         <div className="detail">
                                                 <h4>Open a business account online</h4>
-                                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                                                <p>Set up your business banking in minutes with a seamless online process. Manage finances efficiently, access key services, and unlock growth opportunities—all from the comfort of your device!</p>
                                         </div>
                                 </div>
                         </div>

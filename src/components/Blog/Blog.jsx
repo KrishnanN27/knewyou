@@ -10,7 +10,7 @@ export default function Blog() {
           <div className="blog_wrapper">
             <div className="blog_col">
                 <h3>WE HELP BUSINESSES LAUNCH,GROW AND SUCCEED</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, corrupti odit? At iure facere, porro repellat officia quas, dolores magnam assumenda soluta odit harum voluptate inventore ipsa maiores fugiat accusamus eos nulla. Iure voluptatibus explicabo officia.</p>
+                <p>From idea to execution, we provide expert guidance, strategic solutions, and innovative tools to help businesses thrive. Whether you're starting fresh or scaling up, we ensure your success with tailored strategies and continuous support.</p>
                 <div className="btn_wrapper">
                         <a className="btn" href="/">Get Started</a>
                 </div>

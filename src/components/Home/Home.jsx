@@ -25,8 +25,7 @@ export default function Home() {
                 WE PROMOTE YOUR <span>BUSINESS</span>
               </h3>
               <p>
-                Nemo enim ipsam oluptatem quia reoluptas sit aspernatur aut odit
-                aut fugit, sed quia consequuntur magni dolores eosqui ratione.
+                We help businesses unlock their true potential with strategic insights and innovative marketing solutions. Let’s elevate your brand and connect with the right audience—your success starts here!
               </p>
               <div className="btn_wrapper">
                 <a className="btn" href="/">
