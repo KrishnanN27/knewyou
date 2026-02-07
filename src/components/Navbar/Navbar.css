@@ -7,7 +7,7 @@
   z-index: 100;
   width: 100%;
   background-color: var(--nav-bg);
-  padding: 0.75rem 0;
+  padding: 0.4rem 0; /* REDUCED HEIGHT */
   transition: all 0.3s ease-in-out;
 }
 
@@ -27,15 +27,21 @@
 
 #site_header .navbar {
   display: flex;
-  align-items: center;
+  align-items: center; /* TIGHT VERTICAL ALIGN */
   justify-content: space-between;
+  height: 72px;
+}
+
+#site_header .navbar_brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 #site_header .navbar_brand img {
-  width: 180px; /* FORCE visual size */
-  height: auto;
-  max-width: none;
-  max-height: none;
+  width: 200px; /* BIG LOGO */
+  max-height: 100%; /* 🚨 prevents header growth */
+  object-fit: contain;
   display: block;
 }
 
@@ -49,8 +55,8 @@
 }
 
 #site_header .navbar_toggler svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 #site_header .navbar_toggler svg path {
@@ -79,18 +85,18 @@
 
 #site_header .menu_items ul li {
   list-style: none;
-  padding: 0 1rem;
+  padding: 0 1.25rem; /* BALANCED SPACING */
 }
 
 #site_header .menu_items ul li a {
-  font-family: var(--heading-font); /* Restora */
-  font-size: 0.95rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-family: var(--heading-font);
+  font-size: 1.1rem; /* BIGGER TEXT */
+  font-weight: 500;
+  letter-spacing: 0.03em;
   text-transform: none;
   color: var(--text-main);
   cursor: pointer;
-  padding: 0.5rem 0;
+  padding: 0.25rem 0; /* REDUCED HEIGHT */
   transition:
     color 0.25s ease,
     opacity 0.25s ease;
@@ -100,6 +106,7 @@
 #site_header .menu_items ul li a:hover,
 #site_header .menu_items ul li a.active {
   color: var(--accent);
+  opacity: 1;
 }
 
 /* =========================
@@ -115,7 +122,7 @@
     background-color: var(--nav-bg);
     transform: translateY(-120%);
     transition: transform 0.3s ease;
-    padding: 1.5rem 0;
+    padding: 1.25rem 0;
   }
 
   #site_header .menu_items.active {
@@ -132,6 +139,10 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     width: 100%;
     text-align: center;
+  }
+
+  #site_header .menu_items ul li a {
+    font-size: 1.2rem; /* MOBILE READABILITY */
   }
 }
 

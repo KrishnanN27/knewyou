@@ -1,116 +1,114 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Home.css";
-
-import HeroImg from "../../assets/homepage/h1.jpg";
 import Img2 from "../../assets/homepage/h2.PNG";
 import Img3 from "../../assets/homepage/h3.PNG";
 import Img4 from "../../assets/homepage/h4.PNG";
+
+import HeroImg from "../../assets/homepage/h1.jpg";
+import Logo from "../../assets/logo/logo.png";
 
 export default function Home() {
   return (
     <>
       {/* ================= HERO ================= */}
-      <section id="home" className="home-hero">
+      <section className="home-hero">
         <motion.div
           className="home-hero-bg"
           style={{ backgroundImage: `url(${HeroImg})` }}
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1.05 }}
-          transition={{
-            duration: 10,
-            ease: "easeOut",
-            repeat: Infinity,
-            repeatType: "mirror",
-          }}
+          initial={{ scale: 1.05 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 8, ease: "easeOut" }}
         />
 
         <div className="container">
           <div className="home-hero-content">
-            <motion.h1
+            <motion.img
+              src={Logo}
+              alt="Knew You Logo"
+              className="home-logo"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
+            />
+
+            <motion.h2
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
             >
-              Knew You
-            </motion.h1>
+              Youth & Teen Center
+            </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 1 }}
+              transition={{ delay: 0.4 }}
             >
-              A place for identity, belonging, and faith-based personal growth —
-              where young hearts are seen, known, and supported.
+              A place for identity, belonging & faith-based personal growth
             </motion.p>
 
-            <motion.div
-              className="scroll-cue"
-              animate={{ y: [0, 12, 0] }}
-              transition={{ repeat: Infinity, duration: 2 }}
+            <motion.span
+              className="age-badge"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
             >
-              ↓
-            </motion.div>
+              Ages 8–20
+            </motion.span>
           </div>
         </div>
       </section>
 
-      {/* ================= IMAGES ================= */}
-      <motion.section
-        className="home-images"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
+      {/* ================= FEATURES (POSTER TEXT) ================= */}
+      {/* ================= FEATURES ================= */}
+      <section className="home-features">
         <div className="container">
-          <motion.p
-            className="image-intro"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            This is what growth can look like.
-          </motion.p>
+          {/* TEXT ROW */}
+          <div className="feature-grid">
+            <div className="feature-card">
+              <h3>Creative Expression</h3>
+              <p>
+                Explore journaling, art, music, and movement as a way to connect
+                and express your faith
+              </p>
+            </div>
 
-          <div className="image-grid">
-            {[
-              { src: Img2, label: "Expression" },
-              { src: Img3, label: "Mentorship" },
-              { src: Img4, label: "Belonging" },
-            ].map((img, i) => (
-              <motion.div
-                key={i}
-                className="image-card"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15, duration: 0.8 }}
-              >
-                <img src={img.src} alt={img.label} />
-                <span>{img.label}</span>
-              </motion.div>
-            ))}
+            <div className="feature-card">
+              <h3>Safe Community</h3>
+              <p>
+                Build friendships, share openly, and deepen your faith in a
+                safe, affirming space
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <h3>Mentorship & Leadership</h3>
+              <p>
+                Develop leadership skills and grow in confidence to shine your
+                unique light
+              </p>
+            </div>
+          </div>
+
+          {/* IMAGE ROW */}
+          <div className="feature-images">
+            <img src={Img2} alt="Creative Expression" />
+            <img src={Img3} alt="Safe Community" />
+            <img src={Img4} alt="Mentorship & Leadership" />
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* ================= STATEMENT ================= */}
-      <motion.section
-        className="home-statement"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
+      <section className="home-statement">
         <div className="container">
           <p>
-            Discover who you were created to be, find belonging, and grow into
-            the fullness of who God made you to be.
+            Discover who you were created to be, find belonging, and deepen your
+            faith.
           </p>
         </div>
-      </motion.section>
+      </section>
     </>
   );
 }
