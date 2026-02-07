@@ -1,14 +1,14 @@
-import React,{ useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { Link } from "react-scroll";
 import Logo from "../../assets/logo/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [sidenav, setSidenav] = useState(false);
 
-//   //Desktop fixed Menu
+  //   //Desktop fixed Menu
   const [sticky, setSticky] = useState(false);
 
   //Mobile Icon
@@ -32,8 +32,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header id="site_header" className={`${sticky ? "sticky" : ''}`}>
-        
+      <header id="site_header" className={`${sticky ? "sticky" : ""}`}>
         <div className="container">
           <nav className="navbar" id="Navbar">
             <div className="navbar_brand">
@@ -41,11 +40,10 @@ export default function Navbar() {
                 <img src={Logo} alt="Logo" />
               </a>
             </div>
-            <div className="navbar_toggler" onClick={sidenavShow} >
-               
+            <div className="navbar_toggler" onClick={sidenavShow}>
               {menuIcon}
             </div>
-            < div className={`menu_items ${sidenav === true ? "active" : ""}`}>
+            <div className={`menu_items ${sidenav === true ? "active" : ""}`}>
               <ul>
                 <li>
                   <Link activeClass="active" to="home" spy={true} smooth={true}>
@@ -80,7 +78,6 @@ export default function Navbar() {
           </nav>
         </div>
       </header>
-
     </>
-  )
+  );
 }
