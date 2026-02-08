@@ -46,31 +46,33 @@ export default function Navbar() {
             <div className={`menu_items ${sidenav === true ? "active" : ""}`}>
               <ul>
                 <li>
-                  <Link activeClass="active" to="home" spy={true} smooth={true}>
+                  <Link to="home" spy smooth offset={-90}>
                     Home
                   </Link>
                 </li>
-
                 <li>
-                  <Link to="about" spy={true} smooth={true}>
-                    About US
+                  <Link to="vision" spy smooth offset={-90}>
+                    Vision
                   </Link>
                 </li>
-
                 <li>
-                  <Link to="services" spy={true} smooth={true}>
+                  <Link to="services" spy smooth offset={-90}>
                     Services
                   </Link>
                 </li>
-
                 <li>
-                  <Link to="blog" spy={true} smooth={true}>
-                    Blog
+                  <Link to="community" spy smooth offset={-90}>
+                    Community
                   </Link>
                 </li>
                 <li>
-                  <Link to="contact" spy={true} smooth={true}>
-                    Contact US
+                  <Link to="events" spy smooth offset={-90}>
+                    Events
+                  </Link>
+                </li>
+                <li className="nav_cta">
+                  <Link to="connect" spy smooth offset={-90}>
+                    Connect
                   </Link>
                 </li>
               </ul>

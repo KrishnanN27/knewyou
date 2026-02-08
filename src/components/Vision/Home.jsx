@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       {/* ================= HERO ================= */}
-      <section id="home" className="home-hero">
+      <section className="home-hero">
         <motion.div
           className="home-hero-bg"
           style={{ backgroundImage: `url(${HeroImg})` }}
