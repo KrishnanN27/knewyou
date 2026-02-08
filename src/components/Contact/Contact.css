@@ -158,3 +158,36 @@ textarea:focus {
 .btn_wrapper .btn:hover {
   background-color: var(--accent-strong);
 }
+
+/* =========================
+   Form Status Messages
+   ========================= */
+
+.form_status {
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Success */
+.form_status.success {
+  background-color: rgba(201, 181, 156, 0.25); /* accent tint */
+  color: var(--text-main);
+  border: 1px solid var(--accent);
+}
+
+.form_status.success .status_icon {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Error */
+.form_status.error {
+  background-color: rgba(239, 68, 68, 0.08);
+  color: #991b1b;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
