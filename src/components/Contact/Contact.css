@@ -1,97 +1,160 @@
-#contact{
-        padding: 3rem 0;
+/* =========================
+   Contact Section
+   ========================= */
 
-        .contact_wrapper{
-                display: flex;
-                justify-content: space-between;
-                margin-top: 4rem;
-                flex-wrap: wrap;
+#contact {
+  padding: 4rem 0;
+  background-color: var(--bg-alt);
+  color: var(--text-main);
+}
 
-                @media (max-width:992px) {
-                        justify-content: center;
-                        
-                }
-                @media (max-width:992px) {
-                        flex-direction: column;
-                }
+#contact h2 {
+  font-family: var(--heading-font);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: var(--text-main);
+}
 
-                .contact_col{
-                        width: calc(100% / 2 - 1rem);
-                        padding: 1rem;
-                        box-sizing: border-box;
+/* =========================
+   Layout
+   ========================= */
 
-                        @media (max-width:992px) {
-                                width: 50%;
-                        }
-                        @media (max-width:992px) {
-                               width: 100%;
-                        }
-                }
-                .input_wrapper{
-                        width: 100%;
-                        display: flex;
+.contact_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
 
-                        .form-control{
-                                width:100%;
-                                background-color: transparent;
-                                border:.0714rem  solid var(--white-color);
-                                color:var(--white-color);
-                                font-size: 1.0714rem;
-                                padding: .7143rem 1.4286rem;
-                                border-radius: .5714rem;
-                                margin-bottom: 3rem;
-                        }
+@media (max-width: 992px) {
+  .contact_wrapper {
+    flex-direction: column;
+  }
+}
 
-                        & textarea{
-                                width:100%;
-                                display: block;
-                                background-color: transparent;
-                                border:.0714rem  solid var(--white-color);
-                                color:var(--white-color);
-                                font-size: 1.0714rem;
-                                font-weight: 400;
-                                padding: .7143rem 1.4286rem;
-                                border-radius: .5714rem;
-                                min-height: 7.1429rem;
-                        }
+.contact_col {
+  width: calc(50% - 1.5rem);
+}
 
-                        .form-control:hover,
-                        & textarea:hover,
-                        .form-control:focus,
-                        & textarea:focus{
-                                border-color:rgb(0, 0, 7) blue;
-                                color:var(--white-color);
-                        }
-                }
-                .btn_wrapper{
-                        margin-top: 2rem;
-                }
-                .contact_image{
-                        position: relative;
+@media (max-width: 992px) {
+  .contact_col {
+    width: 100%;
+  }
+}
 
-                        &:after{
-                                overflow: hidden;
-                                content:url('../../assets/about/layer_2.png');
-                                z-index: 1;
-                                position: absolute;
-                                top:-70px;
-                                right: -20px;
-                                max-width: 100%;
-                        }
+/* =========================
+   Image
+   ========================= */
 
-                        @media (max-width:1024px) {
-                                &:after{
-                                        right:0;
-                                }
-                                
-                        }
+.contact_image {
+  position: relative;
+}
 
-                        & img{
-                                border-radius: 2.1429rem;
-                                position: relative;
-                                z-index: 2;
-                                max-width: 85%;
-                        }
-                }
-        }
+.contact_image img {
+  max-width: 90%;
+  border-radius: 1.8rem;
+  display: block;
+  box-shadow: var(--shadow-soft);
+}
+
+/* =========================
+   Form
+   ========================= */
+
+form {
+  width: 100%;
+}
+
+.input_wrapper {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== FIXED INPUT + TEXTAREA ===== */
+
+.form-control,
+textarea {
+  width: 100%;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
+
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.6rem;
+  outline: none;
+
+  transition: border-color 0.2s ease;
+
+  /* IMPORTANT: remove browser default styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Smooth font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* ===== PLACEHOLDER FIX ===== */
+
+.form-control::placeholder,
+textarea::placeholder {
+  font-family: var(--body-font);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Hover & Focus */
+
+.form-control:hover,
+textarea:hover {
+  border-color: var(--accent);
+}
+
+.form-control:focus,
+textarea:focus {
+  border-color: var(--accent-strong);
+}
+
+/* =========================
+   Button
+   ========================= */
+
+.btn_wrapper {
+  margin-top: 2rem;
+}
+
+.btn_wrapper .btn {
+  width: 100%;
+  padding: 0.95rem 0;
+  border-radius: 0.6rem;
+
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  font-weight: 400;
+
+  background-color: var(--accent);
+  color: var(--text-main);
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 0.25s ease;
+}
+
+.btn_wrapper .btn:hover {
+  background-color: var(--accent-strong);
 }
